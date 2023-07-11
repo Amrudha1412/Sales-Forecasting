@@ -1,0 +1,26 @@
+body{
+    background-image: url("D:\b.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+div{
+    margin-left: 40%;
+    margin-right: 40%;
+}
+form{
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+ngx-dropzone{
+    background: transparent;
+    align-items: center;
+    height: 650px;
+    
+}
+.summer{
+    margin-left:45%;
+    margin-right:45%;
+}

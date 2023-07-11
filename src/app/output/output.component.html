@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <div>
+               <h1>Sales Prediction</h1>
+           
+                
+               <form #predictform="ngForm" (ngSubmit)="onPredict()">
+                   <input type="text" name="QUANTITYORDERED" [(ngModel)]="formData.QUANTITYORDERED" placeholder = "QUANTITYORDERED"><br>
+                   <input type="text" name="PRICEEACH"  [(ngModel)]="formData.PRICEEACH" placeholder ="PRICEEACH"><br>
+                   <input type="text" name="MONTH_ID" [(ngModel)]="formData.MONTH_ID" placeholder = "MONTH_ID"><br>
+                   <input type="text" name="YEAR_ID" [(ngModel)]="formData.YEAR_ID" placeholder = "YEAR_ID"><br>
+                   <input type="text" name="DEALSIZE" [(ngModel)]="formData.DEALSIZE" placeholder = "DEALSIZE"><br>
+                   <button type="submit" class="m_btn m_btn-primary m_btn-block m_btn-large">PREDICT</button>
+               </form>
+           
+              <br>
+              <div *ngIf="response">{{response | json}}</div>
+              <br>
+              <button routerLink="/report" routerLinkActive="active">View Report</button>             
+        </div>
+    </body></html>
+

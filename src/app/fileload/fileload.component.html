@@ -1,0 +1,19 @@
+<body>
+    
+    <form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+      <ngx-dropzone (change)="onSelect($event)">
+          <ngx-dropzone-label>Drop The File!</ngx-dropzone-label>
+        <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+            <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+        </ngx-dropzone-preview>
+      </ngx-dropzone>
+      <p *ngFor="let f of files">
+        {{ f.name }} ({{ f.type }})
+      </p>
+        <button type="submit" (ngSubmit)="onSubmit()">Upload</button>
+    </form>
+    <div *ngIf="response">
+      {{ response.message }} {{ response.data }}
+    </div>
+    <button class="summer"><a routerLink="/predict" routerLinkActive="active">Go to next page</a></button>
+</body>
