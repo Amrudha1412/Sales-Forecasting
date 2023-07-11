@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        
+    </style></head>
+    <body>
+        <div>
+            <div class="m_login">
+                <center>
+               <h1>Sales Prediction</h1>
+           
+                
+               <form action ="{{url_for('predict')}}" method="post">
+                   <input type="text" name="QUANTITYORDERED" placeholder = "QUANTITYORDERED"><br>
+                   <input type="text" name="PRICEEACH"  placeholder ="PRICEEACH"><br>
+                   <input type="text" name="MONTH_ID" placeholder = "MONTH_ID"><br>
+                   <input type="text" name="YEAR_ID" placeholder = "YEAR_ID"><br>
+                   <input type="text" name="DEALSIZE" placeholder = "DEALSIZE"><br>
+                   <button type="submit" class="m_btn m_btn-primary m_btn-block m_btn-large">PREDICT</button>
+               </form>
+           
+              <br>
+              <br>
+              {{ prediction_text }}
+            </div>
+        </div>
+    </body></html>
